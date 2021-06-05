@@ -1,5 +1,5 @@
 {
-  "name": "ilcleme/cryptocurrencies-laravel",
+  "name": "oasin/cryptocurrencies-laravel",
   "description": "Laravel package for cryptocurrencies api service",
   "type": "library",
   "keywords": [
