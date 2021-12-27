@@ -1,9 +1,9 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Test;
+namespace Oasin\Cryptocurrencies\Test;
 
-use IlCleme\Cryptocurrencies\Contracts\CryptcompareManager;
-use IlCleme\Cryptocurrencies\Contracts\GatewayInterface;
+use Oasin\Cryptocurrencies\Contracts\CryptcompareManager;
+use Oasin\Cryptocurrencies\Contracts\GatewayInterface;
 
 class CryptocompareManagerTest extends TestCase
 {

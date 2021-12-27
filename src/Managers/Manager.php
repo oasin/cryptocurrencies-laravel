@@ -1,9 +1,9 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Managers;
+namespace Oasin\Cryptocurrencies\Managers;
 
-use IlCleme\Cryptocurrencies\Contracts\CryptcompareManager;
-use IlCleme\Cryptocurrencies\Contracts\GatewayInterface;
+use Oasin\Cryptocurrencies\Contracts\CryptcompareManager;
+use Oasin\Cryptocurrencies\Contracts\GatewayInterface;
 
 class Manager implements CryptcompareManager
 {
@@ -16,7 +16,7 @@ class Manager implements CryptcompareManager
      */
     public function getGateways()
     {
-        if (! $this->gateways) {
+        if (!$this->gateways) {
             return collect([]);
         }
 
@@ -31,7 +31,7 @@ class Manager implements CryptcompareManager
      */
     public function getGateway($gateway)
     {
-        if (! $this->gateways) {
+        if (!$this->gateways) {
             return false;
         }
 
@@ -52,7 +52,7 @@ class Manager implements CryptcompareManager
      */
     public function addGateway(GatewayInterface $gateway)
     {
-        if (! $this->gateways) {
+        if (!$this->gateways) {
             $this->gateways = collect([]);
         }
 

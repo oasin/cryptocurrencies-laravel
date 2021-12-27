@@ -1,9 +1,9 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Test;
+namespace Oasin\Cryptocurrencies\Test;
 
-use IlCleme\Cryptocurrencies\Contracts\GatewayInterface;
-use IlCleme\Cryptocurrencies\Gateways\Coinmarketcap\CoinmarketcapGateway;
+use Oasin\Cryptocurrencies\Contracts\GatewayInterface;
+use Oasin\Cryptocurrencies\Gateways\Coinmarketcap\CoinmarketcapGateway;
 
 class CoinmarketcapGatewayTest extends TestCase
 {

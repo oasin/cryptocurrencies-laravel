@@ -15,11 +15,11 @@ return [
     |
     */
     'gateways' => [
-        \IlCleme\Cryptocurrencies\Gateways\Cryptocompare\CryptocompareGeneralInfoGateway::class,
-        \IlCleme\Cryptocurrencies\Gateways\Cryptocompare\CryptocompareHistoricalGateway::class,
-        \IlCleme\Cryptocurrencies\Gateways\Cryptocompare\CryptocomparePriceGateway::class,
-        \IlCleme\Cryptocurrencies\Gateways\Cryptocompare\CryptocompareTopListsGateway::class,
-        \IlCleme\Cryptocurrencies\Gateways\Coinmarketcap\CoinmarketcapGateway::class,
+        \Oasin\Cryptocurrencies\Gateways\Cryptocompare\CryptocompareGeneralInfoGateway::class,
+        \Oasin\Cryptocurrencies\Gateways\Cryptocompare\CryptocompareHistoricalGateway::class,
+        \Oasin\Cryptocurrencies\Gateways\Cryptocompare\CryptocomparePriceGateway::class,
+        \Oasin\Cryptocurrencies\Gateways\Cryptocompare\CryptocompareTopListsGateway::class,
+        \Oasin\Cryptocurrencies\Gateways\Coinmarketcap\CoinmarketcapGateway::class,
     ],
 
     /*

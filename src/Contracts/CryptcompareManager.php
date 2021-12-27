@@ -1,6 +1,6 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Contracts;
+namespace Oasin\Cryptocurrencies\Contracts;
 
 interface CryptcompareManager
 {

@@ -19,22 +19,23 @@
     }
   ],
   "require": {
-    "php": "^7.1.3"
+    "php": "^7.1.3",
+    "guzzlehttp/guzzle": "^7.0.1"
   },
   "autoload": {
     "psr-4": {
-      "IlCleme\\Cryptocurrencies\\": "src"
+      "Oasin\\Cryptocurrencies\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "IlCleme\\Cryptocurrencies\\Test\\": "tests/"
+      "Oasin\\Cryptocurrencies\\Test\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "IlCleme\\Cryptocurrencies\\Providers\\CryptocurrenciesServiceProvider"
+        "Oasin\\Cryptocurrencies\\Providers\\CryptocurrenciesServiceProvider"
       ]
     }
   },

@@ -1,8 +1,8 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Test;
+namespace Oasin\Cryptocurrencies\Test;
 
-use IlCleme\Cryptocurrencies\Providers\CryptocurrenciesServiceProvider;
+use Oasin\Cryptocurrencies\Providers\CryptocurrenciesServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase

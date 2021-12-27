@@ -1,6 +1,6 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Gateways\Cryptocompare;
+namespace Oasin\Cryptocurrencies\Gateways\Cryptocompare;
 
 use GuzzleHttp\Client;
 
@@ -38,7 +38,7 @@ class CryptocomparePriceGateway extends CryptocompareGateway
     public function getSingleSymbolPrice($options = [])
     {
         return $this->send(
-            $this->endpoint."/price",
+            $this->endpoint . "/price",
             'GET',
             ['query' => array_merge($this->getEndpointConfiguration(), $options)]
         );
@@ -53,7 +53,7 @@ class CryptocomparePriceGateway extends CryptocompareGateway
     public function getMultiSymbolPrice($options = [])
     {
         return $this->send(
-            $this->endpoint."/pricemulti",
+            $this->endpoint . "/pricemulti",
             'GET',
             ['query' => array_merge($this->getEndpointConfiguration(), $options)]
         );
@@ -69,7 +69,7 @@ class CryptocomparePriceGateway extends CryptocompareGateway
     public function getMultiSymbolPriceFull($options = [])
     {
         return $this->send(
-            $this->endpoint."/pricemultifull",
+            $this->endpoint . "/pricemultifull",
             'GET',
             ['query' => array_merge($this->getEndpointConfiguration(), $options)]
         );
@@ -85,7 +85,7 @@ class CryptocomparePriceGateway extends CryptocompareGateway
     public function getCustomAverage($options = [])
     {
         return $this->send(
-            $this->endpoint."/generateAvg",
+            $this->endpoint . "/generateAvg",
             'GET',
             ['query' => array_merge($this->getEndpointConfiguration(), $options)]
         );

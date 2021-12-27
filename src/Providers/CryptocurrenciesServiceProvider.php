@@ -1,9 +1,9 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Providers;
+namespace Oasin\Cryptocurrencies\Providers;
 
-use IlCleme\Cryptocurrencies\Contracts\CryptcompareManager;
-use IlCleme\Cryptocurrencies\Managers\Manager;
+use Oasin\Cryptocurrencies\Contracts\CryptcompareManager;
+use Oasin\Cryptocurrencies\Managers\Manager;
 use Illuminate\Support\ServiceProvider;
 
 class CryptocurrenciesServiceProvider extends ServiceProvider
@@ -16,7 +16,7 @@ class CryptocurrenciesServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../../config/cryptocurrencies.php' => config_path('cryptocurrencies.php'),
+            __DIR__ . '/../../config/cryptocurrencies.php' => config_path('cryptocurrencies.php'),
         ]);
     }
 
@@ -39,7 +39,8 @@ class CryptocurrenciesServiceProvider extends ServiceProvider
         $this->app->alias(CryptcompareManager::class, 'cryptocurrencies.manager');
 
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/cryptocurrencies.php', 'cryptocurrencies'
+            __DIR__ . '/../../config/cryptocurrencies.php',
+            'cryptocurrencies'
         );
     }
 }

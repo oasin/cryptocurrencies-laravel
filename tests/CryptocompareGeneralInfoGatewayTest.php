@@ -1,9 +1,9 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Test;
+namespace Oasin\Cryptocurrencies\Test;
 
-use IlCleme\Cryptocurrencies\Contracts\GatewayInterface;
-use IlCleme\Cryptocurrencies\Gateways\Cryptocompare\CryptocompareGeneralInfoGateway;
+use Oasin\Cryptocurrencies\Contracts\GatewayInterface;
+use Oasin\Cryptocurrencies\Gateways\Cryptocompare\CryptocompareGeneralInfoGateway;
 
 class CryptocompareGeneralInfoGatewayTest extends TestCase
 {
@@ -67,7 +67,7 @@ class CryptocompareGeneralInfoGatewayTest extends TestCase
         $gateway = $this->app[CryptocompareGeneralInfoGateway::class];
         $response = $gateway->getAllExchangeGeneralInfo();
 
-        if (! empty(config('cryptocurrencies.cryptocompare.api_key'))) {
+        if (!empty(config('cryptocurrencies.cryptocompare.api_key'))) {
             $this->assertStringContainsString("Success", $response);
         } else {
             $this->assertStringContainsString("Error", $response);
@@ -84,7 +84,7 @@ class CryptocompareGeneralInfoGatewayTest extends TestCase
         $gateway = $this->app[CryptocompareGeneralInfoGateway::class];
         $response = $gateway->getAllWalletGeneralInfo();
 
-        if (! empty(config('cryptocurrencies.cryptocompare.api_key'))) {
+        if (!empty(config('cryptocurrencies.cryptocompare.api_key'))) {
             $this->assertStringContainsString("Success", $response);
         } else {
             $this->assertStringContainsString("Error", $response);
@@ -101,7 +101,7 @@ class CryptocompareGeneralInfoGatewayTest extends TestCase
         $gateway = $this->app[CryptocompareGeneralInfoGateway::class];
         $response = $gateway->getAllCryptoCardGeneralInfo();
 
-        if (! empty(config('cryptocurrencies.cryptocompare.api_key'))) {
+        if (!empty(config('cryptocurrencies.cryptocompare.api_key'))) {
             $this->assertStringContainsString("Success", $response);
         } else {
             $this->assertStringContainsString("Error", $response);

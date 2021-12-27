@@ -1,8 +1,8 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Gateways\Cryptocompare;
+namespace Oasin\Cryptocurrencies\Gateways\Cryptocompare;
 
-use IlCleme\Cryptocurrencies\Gateways\Gateway;
+use Oasin\Cryptocurrencies\Gateways\Gateway;
 
 class CryptocompareGateway extends Gateway
 {

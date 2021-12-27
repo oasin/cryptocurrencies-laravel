@@ -1,11 +1,11 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Gateways;
+namespace Oasin\Cryptocurrencies\Gateways;
 
 use GuzzleHttp\Client;
-use IlCleme\Cryptocurrencies\Contracts\GatewayInterface;
-use IlCleme\Cryptocurrencies\Contracts\HTTP;
-use IlCleme\Cryptocurrencies\Contracts\Request;
+use Oasin\Cryptocurrencies\Contracts\GatewayInterface;
+use Oasin\Cryptocurrencies\Contracts\HTTP;
+use Oasin\Cryptocurrencies\Contracts\Request;
 
 abstract class Gateway implements GatewayInterface
 {

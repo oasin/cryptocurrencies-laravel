@@ -1,10 +1,10 @@
 <?php
 
-namespace IlCleme\Cryptocurrencies\Gateways\Coinmarketcap;
+namespace Oasin\Cryptocurrencies\Gateways\Coinmarketcap;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
-use IlCleme\Cryptocurrencies\Gateways\Gateway;
+use Oasin\Cryptocurrencies\Gateways\Gateway;
 
 //TODO: create specific method for every coinmarketcap endpoint to permit custom cache time per request
 class CoinmarketcapGateway extends Gateway
@@ -30,12 +30,12 @@ class CoinmarketcapGateway extends Gateway
      */
     public function send($endpoint, $method = 'GET', $options = [])
     {
-        if (! array_get($options, 'headers.X-CMC_PRO_API_KEY')) {
+        if (!array_get($options, 'headers.X-CMC_PRO_API_KEY')) {
             $options = array_merge($options, ['headers' => ['X-CMC_PRO_API_KEY' => config('cryptocurrencies.coinmarketcap.api_key')]]);
         }
 
         try {
-            $response = $this->http->request($method, $this->endpoint.$endpoint, $options);
+            $response = $this->http->request($method, $this->endpoint . $endpoint, $options);
         } catch (RequestException $exception) {
             $response = $exception->getResponse();
         }
