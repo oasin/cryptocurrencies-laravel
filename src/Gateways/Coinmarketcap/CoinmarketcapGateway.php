@@ -35,7 +35,7 @@ class CoinmarketcapGateway extends Gateway
 
         $apiKey = config('cryptocurrencies.api_key') ?? $this->getApiKey();
 
-        if (!array_get($options, 'headers.X-CMC_PRO_API_KEY')) {
+        if (!\Arr::get($options, 'headers.X-CMC_PRO_API_KEY')) {
             $options = array_merge($options, ['headers' => ['X-CMC_PRO_API_KEY' => $apiKey]]);
         }
 
