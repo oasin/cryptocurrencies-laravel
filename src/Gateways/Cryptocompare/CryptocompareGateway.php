@@ -15,6 +15,8 @@ class CryptocompareGateway extends Gateway
     /** @var $name string Name of gateway */
     protected $name;
 
+    protected $apiKey;
+
     /**
      * {@inheritdoc}
      */
@@ -33,5 +35,25 @@ class CryptocompareGateway extends Gateway
     protected function getEndpointConfiguration()
     {
         return $this->endpointOptions;
+    }
+
+    /**
+     * Get the value of apiKey
+     */ 
+    public function getApiKey()
+    {
+        return $this->apiKey;
+    }
+
+    /**
+     * Set the value of apiKey
+     *
+     * @return  self
+     */ 
+    public function setApiKey($apiKey)
+    {
+        $this->apiKey = $apiKey;
+
+        return $this;
     }
 }

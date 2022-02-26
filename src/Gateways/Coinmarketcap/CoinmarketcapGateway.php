@@ -12,6 +12,8 @@ class CoinmarketcapGateway extends Gateway
     /** @var string endpoint for coinmarketcap platform */
     protected $endpoint = '';
 
+    protected $apiKey;
+
     /** @var $name string Name of gateway */
     protected $name = 'coinmarketcap';
 
@@ -30,8 +32,11 @@ class CoinmarketcapGateway extends Gateway
      */
     public function send($endpoint, $method = 'GET', $options = [])
     {
+
+        $apiKey = config('cryptocurrencies.api_key') ?? $this->getApiKey();
+
         if (!array_get($options, 'headers.X-CMC_PRO_API_KEY')) {
-            $options = array_merge($options, ['headers' => ['X-CMC_PRO_API_KEY' => config('cryptocurrencies.coinmarketcap.api_key')]]);
+            $options = array_merge($options, ['headers' => ['X-CMC_PRO_API_KEY' => $apiKey]]);
         }
 
         try {
@@ -60,5 +65,25 @@ class CoinmarketcapGateway extends Gateway
             'limit' => $limit,
             'symbol' => $symbol,
         ]);
+    }
+
+    /**
+     * Get the value of apiKey
+     */
+    public function getApiKey()
+    {
+        return $this->apiKey;
+    }
+
+    /**
+     * Set the value of apiKey
+     *
+     * @return  self
+     */
+    public function setApiKey($apiKey)
+    {
+        $this->apiKey = $apiKey;
+
+        return $this;
     }
 }

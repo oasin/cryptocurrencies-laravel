@@ -14,7 +14,7 @@ class CryptocompareGeneralInfoGateway extends CryptocompareGateway
 
         $this->endpointOptions = [
             'extraParams' => config('cryptocurrencies.cryptocompare.extraParams'),
-            'api_key' => config('cryptocurrencies.cryptocompare.api_key'),
+            'api_key' => config('cryptocurrencies.cryptocompare.api_key') ?? $this->getApiKey(),
         ];
         $this->endpoint = 'https://min-api.cryptocompare.com';
     }
